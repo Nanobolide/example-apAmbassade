@@ -53,10 +53,3 @@ Route::get('/communique','AmbassadeController@communique')->name('communique');
 
 
 
-
-//teste image Laravel 9
-// Route::resource('imageteste', imageTesteController::class);
-
-Route::get('/imageteste','imageTesteController@index')->name('index');
-Route::get('/imageteste/create','imageTesteController@create')->name('create');
-Route::post('/imageteste/post','imageTesteController@store')->name('store');

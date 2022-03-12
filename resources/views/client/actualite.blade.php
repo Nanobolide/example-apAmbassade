@@ -15,12 +15,10 @@
                         
             @endif</p> --}}
           <div class="card shadow-sm mt-5">
-              <div class="img">
-                {{Storage::url($actualite->image)}}
-              </div>
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="{{Storage::url($actualite->image)}}" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            </svg>
+            <img   class="bd-placeholder-img card-img-top" width="10%" height="225" src="{{Storage::url($actualite->image)}}" width="80">
+            {{-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="{{Storage::url($actualite->image)}}"  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">{{Storage::url($actualite->image)}}</text>
+            </svg> --}}
 
             <div class="card-body">
               <p class="card-text">{{$actualite->titre}}</p>

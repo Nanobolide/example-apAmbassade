@@ -35,7 +35,7 @@ class AdminController extends Controller
 
     public function actualite()
     {
-        $actualites = Actualite::get();
+        $actualites = Actualite::paginate(4);
         return view('admin.actualite',compact('actualites'));
 
     }

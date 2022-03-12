@@ -65,12 +65,6 @@
         <div class="row content">
           <div class="col-lg-6 ">
 
-           {{-- <ul>
-             <h1>Raccourcis</h1>
-             <li><a href="" class="">COMMENT VENIR À L'AMBASSADE ?</a></li>
-             <li><a href="">S'INSCRIRE À L'AMBASSADE</a></li>      
-           </ul> --}}
-
            <img src="assets/img/img1.jpg" alt="" width="100%" height="500px">
           </div>
 
@@ -99,78 +93,79 @@
     <div>
       
     </div>
+
+
+
+
+
+
+        <div class="container">
+          <div class="row">
+            
+          </div>
+        </div>
+        
+        <h2 class="text-center mb-5">Actualité</h2>
+          <div class="container-fluid ">
+              <div class="row ">
+                @forelse($actualites as $actualite)
+                
+                  <div class="col-3 card-header">
+                    <div class="icon-box card-body">
+                    @if($actualite->image)
+
+                    <img src="{{Storage::url($actualite->image)}}" width="90">
+                        @else       
+                      @endif</p>
+                <p>{{$actualite->titre}}</p>
+                  <p>{{$actualite->contenu}}</p>
+                    </div>
+                </div>
+              @empty
+              <td>Pas d'Actualité</td>
+          @endforelse
+                  
+              </div>
+          </div>
+
+
+
+
+
+
+
+
     <section id="services" class="services">
-      <h2 class="text-center mb-5">Actualité</h2>
-       @forelse($actualites as $actualite)
+      
+      
       <div class="container mb-5" >
 
         <div class="row">
-         
-
-          <div class="col-md-6">
-            <div class="icon-box">
-              <i class="bi bi-briefcase"></i>
-              <h4><a href="#">Lorem Ipsum</a></h4>
-                <p>                      
-                  @if($actualite->image)
-
-                  <img src="{{Storage::url($actualite->image)}}" width="80">
-                      @else
-                          
-              @endif</p>
-              <p>{{$actualite->titre}}</p>
-                <p>{{$actualite->contenu}}</p>
-
-            </div>
-            @empty
-            <td>Pas d'Actualité</td>
-        @endforelse
-          </div>
-          {{-- <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-card-checklist"></i>
-              <h4><a href="#">Dolor Sitema</a></h4>
-
-              @if($actualite->image)
-
-                <img src="{{Storage::url($actualite->image)}}" width="80">
-                    @else
-                        
-            @endif</p>
-            <p>{{$actualite->titre}}</p>
-              <p>{{$actualite->contenu}}</p>
-
-            </div>
           
-          </div> --}}
-          {{-- <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-bar-chart"></i>
-              <h4><a href="#">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          <section>
+            <div class="container text-center">
+              <h1 class="text-danger">Communiqués</h1>
             </div>
+            <div class="row">
+            @forelse($actualites as $actualite)
+          
+           <div class="col-md-6">
+              <div class="icon-box">
+                <i class="bi bi-brightness-high"></i>
+                <h4><a href="#">{{$actualite->titre}}</a></h4>
+                <p>{{$actualite->contenu}}</p>
+              </div>
+           </div>
+          
+
+          @empty
+          <td>Pas d'Actualité</td>
+      @endforelse
           </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-binoculars"></i>
-              <h4><a href="#">Nemo Enim</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div> --}}
-          <br>
-          <br>
-          <hr>
-          <div class="container text-center">
-            <h1 class="text-danger">Communiqués</h1>
-          </div>
-          <div class="row">
-            <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-brightness-high"></i>
-              <h4><a href="#">Magni Dolore</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
+          </section>
+
+
+         
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
               <i class="bi bi-calendar4-week"></i>
@@ -187,7 +182,7 @@
 
     <hr>
 
-    h
+
 
 
     @endsection

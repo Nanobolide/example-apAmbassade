@@ -53,9 +53,11 @@
                             @empty
                                 <td>Pas d'Actualité</td>
                             @endforelse
+
                         </tbody>
+                        
                 </table>
-                    
+                   
             </div>
         </div>
 
