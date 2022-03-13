@@ -47,7 +47,7 @@ class AmbassadeController extends Controller
 
     public function actualite()
     {
-        $actualites = Actualite::get();
+        $actualites = Actualite::paginate(3);
         return view('client.actualite',compact('actualites'));
     }
 

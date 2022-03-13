@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','AmbassadeController@home')->name('home');
+ Route::get('/','AmbassadeController@home')->name('home');
 
-Route::get('/accueil', function(){
-    return view('accueil');
+Route::get('/acceuil', function(){
+    return view('welcome');
 });
 
 Route::get('/home','AmbassadeController@home')->name('home');
@@ -29,6 +29,7 @@ Route::get('/home','AmbassadeController@home')->name('home');
     Route::resource('actualite','Admin\ActualiteController');
 
 
+//admin Route
 Route::get('/admin/actulite','AdminController@formactualite')->name('create.actualite');
 Route::post('/admin/actulite/post' ,'AdminController@storeActu')->name('store.actualite');
 Route::get('/admin/actualite','AdminController@actualite')->name('admin.actualite');
@@ -39,6 +40,8 @@ Route::post('/actualite/{id}/update','AdminController@updateActualite')->name('m
 Route::post('/actu/{id}/delete','AdminController@deleteActu')->name('destroy.actualite');
 
 Route::get('/admin/communique','AdminController@create')->name('create.communique');
+// admin
+
 
 Route::get('/contact','AdminController@contact')->name('contact');
 
@@ -55,6 +58,3 @@ Route::get('/visa','AmbassadeController@visa')->name('visa');
 
 Route::get('/actualite','AmbassadeController@actualite')->name('actualite');
 Route::get('/communique','AmbassadeController@communique')->name('communique');
-
-
-
