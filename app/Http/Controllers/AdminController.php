@@ -9,6 +9,11 @@ use PhpParser\Node\Stmt\Echo_;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth','verified']);
+
+    }
     public function formactualite()
     {
         return view('admin.formactualite');
