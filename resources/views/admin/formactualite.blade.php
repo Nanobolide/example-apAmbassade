@@ -1,15 +1,15 @@
 @extends('admin.app')
 @section('content')
-    
+
 
 
 {{-- form --}}
       <div class="container">
 
-      
+
             <h2 class="text-center mt-3">Ajouter l'Actualité</h2>
 
-            <form action="{{route('store.actualite')}}" method="post"  enctype="multipart/form-data" >@csrf 
+            <form action="{{route('store.actualite')}}" method="post"  enctype="multipart/form-data" >@csrf
 
                 <div class="container mt-5">
                   <label for=""><h3> Titre</h3></label>
@@ -26,8 +26,7 @@
                   <input type="submit" value="Créer" class="btn btn-primary ">
                 </div>
                 <br>
-              
+
             </form>
       </div>
-            @endsection 
-  
+            @endsection

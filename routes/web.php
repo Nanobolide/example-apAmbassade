@@ -22,6 +22,13 @@ Route::get('/accueil', function(){
 
 Route::get('/home','AmbassadeController@home')->name('home');
 
+
+// Route::resource('lta', 'LtaController');
+
+# Admin
+    Route::resource('actualite','Admin\ActualiteController');
+
+
 Route::get('/admin/actulite','AdminController@formactualite')->name('create.actualite');
 Route::post('/admin/actulite/post' ,'AdminController@storeActu')->name('store.actualite');
 Route::get('/admin/actualite','AdminController@actualite')->name('admin.actualite');

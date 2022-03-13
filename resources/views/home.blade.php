@@ -14,7 +14,7 @@
             <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
               <div class="carousel-container">
                 <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Sailor</span></h2>
+                  <h2 class="animate__animated animate__fadeInDown">Embassade de la Republique Centrafricaine</h2>
                   <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
                   <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
                 </div>
@@ -88,10 +88,10 @@
 
       </div>
     </section><!-- End About Section -->
- 
+
     <!-- ======= Services Section ======= -->
     <div>
-      
+
     </div>
 
 
@@ -101,21 +101,21 @@
 
         <div class="container">
           <div class="row">
-            
+
           </div>
         </div>
-        
+
         <h2 class="text-center mb-5">Actualité</h2>
           <div class="container-fluid ">
               <div class="row ">
                 @forelse($actualites as $actualite)
-                
+
                   <div class="col-3 card-header">
                     <div class="icon-box card-body">
                     @if($actualite->image)
 
                     <img src="{{Storage::url($actualite->image)}}" width="90">
-                        @else       
+                        @else
                       @endif</p>
                 <p>{{$actualite->titre}}</p>
                   <p>{{$actualite->contenu}}</p>
@@ -124,7 +124,7 @@
               @empty
               <td>Pas d'Actualité</td>
           @endforelse
-                  
+
               </div>
           </div>
 
@@ -136,19 +136,19 @@
 
 
     <section id="services" class="services">
-      
-      
+
+
       <div class="container mb-5" >
 
         <div class="row">
-          
+
           <section>
             <div class="container text-center">
               <h1 class="text-danger">Communiqués</h1>
             </div>
             <div class="row">
             @forelse($actualites as $actualite)
-          
+
            <div class="col-md-6">
               <div class="icon-box">
                 <i class="bi bi-brightness-high"></i>
@@ -156,7 +156,7 @@
                 <p>{{$actualite->contenu}}</p>
               </div>
            </div>
-          
+
 
           @empty
           <td>Pas d'Actualité</td>
@@ -165,7 +165,7 @@
           </section>
 
 
-         
+
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
               <i class="bi bi-calendar4-week"></i>
@@ -174,7 +174,7 @@
             </div>
           </div>
           </div>
-          
+
         </div>
 
       </div>
