@@ -92,11 +92,7 @@ class AdminController extends Controller
     }
 
 
-    public function contact()
-    {
-        return view('contact');
-    }
-
+  
 
     public function create()
     {

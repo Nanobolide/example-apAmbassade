@@ -51,4 +51,9 @@ class AmbassadeController extends Controller
         return view('client.actualite',compact('actualites'));
     }
 
+    public function contact()
+    {
+        return view('contact');
+    }
+
 }

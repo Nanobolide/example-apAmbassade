@@ -43,8 +43,10 @@ Route::get('/admin/communique','AdminController@create')->name('create.communiqu
 // admin
 
 
-Route::get('/contact','AdminController@contact')->name('contact');
+// Route::get(,'AdminController@contact')->name('contact');
 
+
+Route::get('/contact','AmbassadeController@contact')->name('contact');
 Route::get('/ambassadeur','AmbassadeController@ambassadeur')->name('ambassadeur');
 Route::get('/equipe','AmbassadeController@equipe')->name('equipe');
 Route::get('/horaire','AmbassadeController@horaire')->name('horaire');
