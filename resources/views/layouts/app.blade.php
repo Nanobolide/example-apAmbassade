@@ -34,53 +34,64 @@
 </head>
 
 <body>
+  
 
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
+      
 
       <h1 class="logo me-auto"><a href="{{route('home')}}" class="">RCA</a></h1>
-     
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
       <nav id="navbar" class="navbar">
-          <ul>
-            <li><a href="{{route('home')}}" class="active">ACCUEIL</a></li>
+        <ul>
 
-                <li class="dropdown"><a href="#"><span>Ambassade</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="{{route('ambassadeur')}}">Ambassadeur</a></li>
-                    <li><a href="{{route('equipe')}}">Notre equipe </a></li>
-                    <li><a href="{{'horaire'}}">Horaire et accès</a></li>
-                  
-              </ul>
-            </li>
-            
-            <li class="dropdown"><a href=""><span>Services</span><i class="bi bi-chevron-right"></i> </a>
-              <ul>
-                  <li><a href="{{route('inscrire')}}">S'inscrire a l'Ambassade</a></li>
-                  <li><a href="{{route('carte')}}">Carte consulaire</a></li>
-                  <li><a href="{{route('visa')}}">Demande de VISA</a></li>
-                  <li><a href="">Laissez-Passer</a></li>
-              </ul>
-            </li>
+
+          <li><a href="{{route('home')}}" class="active" >Accueil</a></li>
+
+          <li class="dropdown"><a href="#"><span>Ambassade</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+
+              <li><a href="{{route('ambassadeur')}}">Ambassadeur</a></li>
+              <li><a href="{{route('equipe')}}">Notre equipe</a></li>
+              <li><a href="{{'horaire'}}">Horaire et accès</a></li>
+            </ul>
+          </li>
           
-            <li class="dropdown"><a href="#"><span>Presse</span> <i class="bi bi-chevron-right"></i></a>
-               <ul>
-                  <li><a href="{{route('actualite')}}">Actualité</a></li>
-                  <li><a href="{{route('communique')}}">Communiqués</a></li>
-               </ul>
-            </li>
-            <li><a href="{{route('contact')}}">Contact</a></li>
-          </ul>
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                
+              <li><a href="{{route('inscrire')}}">S'inscrire a l'Ambassade</a></li>
+              <li><a href="{{route('carte')}}">Carte consulaire</a></li>
+              <li><a href="{{route('visa')}}">Demande de VISA</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Presse</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                
+              <li><a href="{{route('actualite')}}">Actualité</a></li>
+              <li><a href="{{route('communique')}}">Communiqués</a></li>
+            </ul>
+          </li>
+          <li><a href="{{route('contact')}}">Contact</a></li>
 
-
-    </nav><!-- .navbar -->
+          
+          {{-- <li><a href="" class="getstarted">Get Started</a></li> --}}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
-    <div class="container mb-5"></div><br><br>
-    <div class="mb-5"></div>
 
 
+  <!-- ======= Header ======= -->
+  
+  
+     
+    
+  
 
   @yield('content')
   

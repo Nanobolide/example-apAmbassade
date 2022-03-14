@@ -39,7 +39,8 @@ Route::post('/actualite/{id}/update','AdminController@updateActualite')->name('m
 
 Route::post('/actu/{id}/delete','AdminController@deleteActu')->name('destroy.actualite');
 
-Route::get('/admin/communique','AdminController@create')->name('create.communique');
+Route::get('/admin/communique/post','AdminController@create')->name('create.communique');
+Route::get('/admin/communique','AdminController@store')->name('admin.communique');
 // admin
 
 

@@ -92,7 +92,10 @@ class AdminController extends Controller
     }
 
 
-  
+        public function store()
+        {
+            return view('admin.communique');
+        }
 
     public function create()
     {

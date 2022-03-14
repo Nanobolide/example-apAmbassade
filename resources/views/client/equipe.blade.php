@@ -1,6 +1,9 @@
 @extends('layouts.app')
     @section('content')
 
+    <div class="container mb-5"></div><br><br>
+    <div class="mb-5"></div>
+    
 <div class="row">
   <div class="mb-3">
     <h3 class='text-center'>Notre equipe</h3>
