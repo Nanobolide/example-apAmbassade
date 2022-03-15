@@ -151,7 +151,7 @@
 
            <div class="col-md-6">
               <div class="icon-box">
-                <i class="bi bi-brightness-high"></i>
+                <i class="bi bi-exclamation-circle"></i>
                 <h4><a href="#">{{$actualite->titre}}</a></h4>
                 <p>{{$actualite->contenu}}</p>
               </div>

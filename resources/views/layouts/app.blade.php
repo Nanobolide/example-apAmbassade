@@ -102,7 +102,7 @@
 <!-- ======= Footer ======= --><br>
 <footer id="footer" class="page-footer font-small mt-5 position-bottom">
   <div class="footer-top ">
-    <div class="container mt-5">
+    <div class="container ">
       <div class="row fixed">
 
         <div class="col-lg-3 col-md-6">
@@ -115,7 +115,7 @@
               <strong>Phone:</strong> +225 0789103731<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
-            <div class="social-links mt-3">
+            <div class="social-links ">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>

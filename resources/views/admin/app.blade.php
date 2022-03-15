@@ -23,7 +23,7 @@
                         <a class="nav-link" href="{{{route('admin.actualite')}}}">Actualité <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Communiqués </a>
+                        <a class="nav-link" href="{{route('')}}">Communiqués </a>
                     </li>
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ajouter</a>

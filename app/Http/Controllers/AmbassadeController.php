@@ -56,4 +56,9 @@ class AmbassadeController extends Controller
         return view('contact');
     }
 
+    public function communique()
+    {
+        return view('client.communiques');
+    }
+
 }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ActuliteRequest;
 use App\Models\Actualite;
+use App\Models\Communique;
+use GuzzleHttp\Psr7\Request as Psr7Request;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Echo_;
 
@@ -92,13 +94,22 @@ class AdminController extends Controller
     }
 
 
-        public function store()
+        public function store(Request $request)
         {
-            return view('admin.communique');
+            Communique::create([
+                'titre'=>$request->titre,
+                'contenu'=>$request->contenu
+            ]);
+            return back()->with('message','Communiqué ajouter');
         }
 
     public function create()
     {
         return view('admin.formCommunique');
+    }
+    
+    public function communique()
+    {
+        return view('admin.communique');
     }
 }
