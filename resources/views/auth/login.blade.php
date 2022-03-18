@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-4 col-sm-12 offset-md-4">
                 <h2 class="text-center text-dark">Ambassade RCA</h2>
                 <div class="text-center mb-1 text-dark">Connexion</div>
                 <div class="card my-1">
@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="text-center">
-                            <img src="{{ asset('rca/symbole.png')}}"
+                            <img draggable="false" src="{{ asset('rca/symbole.png')}}"
                                 class="img-fluid profile-image-pic img-thumbnail mb-3" width="200px"
                                 alt="profile">
                         </div>
