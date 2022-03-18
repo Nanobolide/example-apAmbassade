@@ -58,7 +58,8 @@ class AmbassadeController extends Controller
 
     public function communique()
     {
-        return view('client.communiques');
+        $actualites = Actualite::paginate(3);
+        return view('client.communiques',compact('actualites'));
     }
 
 }

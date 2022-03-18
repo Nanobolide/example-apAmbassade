@@ -5,40 +5,66 @@
     <div class="mb-5"></div>
 
         <div class="container">
+          {{-- start --}}
+          {{-- @foreach ($actualites as $actualite)
+                <div class="col-md-4">
+              <img   class="bd-placeholder-img card-img-top" width="10%" height="225" src="{{Storage::url($actualite->image)}}" width="80">
+            </div> --}}
+        
 
-            @foreach ($actualites as $actualite)
-                
-            
-            
-            
-            <div class="col"><p>                      
-                {{-- @if($actualite->image)
+            <section id="services" class="services">
 
-                <img src="{{Storage::url($actualite->image)}}" width="80">
-                    @else
-                        
-            @endif</p> --}}
-          <div class="card shadow-sm mt-5">
-            <img   class="bd-placeholder-img card-img-top" width="10%" height="225" src="{{Storage::url($actualite->image)}}" width="80">
-            {{-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="{{Storage::url($actualite->image)}}"  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">{{Storage::url($actualite->image)}}</text>
-            </svg> --}}
 
-            <div class="card-body">
-              <p class="card-text">{{$actualite->titre}}</p>
-              <p>{{$actualite->contenu}}</p>
+              <div class="container mb-5" >
+        
+                <div class="row">
+        
+                  <section>
+                    <div class="container text-center">
+                      <h1 class="text-danger">Actualité</h1>
+                    </div>
+                    <div class="row">
+                    @forelse($actualites as $actualite)
 
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                       <div  class="col-md-4"><img src="{{Storage::url($actualite->image)}}" width="90"></div>
+                   <div class="col-md-8">
+                      <div class="icon-box">
+                        <i class="bi bi-exclamation-circle"></i>
+                       
+                        <h4><a href="#">{{$actualite->titre}}</a></h4>
+                        <p>{{$actualite->contenu}}</p>
+                      </div>
+                   </div>
+        
+        
+                  @empty
+                  <td>Pas d'Actualité</td>
+              @endforelse
+                  </div>
+                  </section>
+        
+        
+        
+                  <div class="col-md-6 mt-4 mt-md-0">
+                    <div class="icon-box">
+                      <i class="bi bi-calendar4-week"></i>
+                      <h4><a href="#">Eiusmod Tempor</a></h4>
+                      <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                    </div>
+                  </div>
+                  </div>
+        
                 </div>
-                <small class="text-muted">9 mins</small>
+        
               </div>
-            </div>
-          </div>
-        </div>
+            </section><!-- End Services Section -->
+        
+
+          
             
-        @endforeach
-        </div>
+            
+           
+            
+        
+       
     @endsection
